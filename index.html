@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    <title>Web Project Init Tool - v2 Mockup</title>
+    <!-- Blueprint CSS-->
+    <link rel="stylesheet" href="blueprint/screen.css" type="text/css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="blueprint/screen.css" type="text/css" media="screen" charset="utf-8">
+    <!--[if lt IE 8]><link rel="stylesheet" href="../blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
+    <style type="text/css" media="screen">
+        textarea { height: 100px; }
+        input[type=text]:focus, input[type=password]:focus, input[type=url]:focus, input[type=email]:focus,
+        input.text:focus, input.title:focus,
+        textarea:focus { background-color:#FFFFCC; }
+        fieldset { background-color: #e5e5e5; }
+        legend { padding: 8px; background-color: #cce0ff; border: 1px solid #cccccc;}
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="heading">Web Project Init Tool &mdash; v2 Mockup</h1>
+        <div class="span-24 last">
+            
+            <form action="index_submit" method="get" accept-charset="utf-8">
+                <fieldset id="Project Info">
+                    <legend>Project Info</legend>
+                        <p>
+                            <label for="project_name">Project Name</label><br>
+                            <input type="text" name="project_name" value="" id="project_name" class="title">
+                        </p>
+                        <p>
+                            <label for="project_description">Project Description</label><br>
+                            <textarea name="project_description" rows="3" cols="40"></textarea>
+                        </p>
+                        <p>
+                            <label for="project_link">Project Link</label><br>
+                            <input type="url" name="project_link" value="" id="project_link">
+                        </p>
+                        <p>
+                            <label for="launch_date">Target Launch Date</label><br>
+                            <input type="text" name="launch_date" value="" id="launch_date">
+                        </p>
+                </fieldset>
+                <fieldset id="metrics">
+                    <legend>Project Metrics</legend>
+                        <p>
+                            <label for="target_audience">Target Audience</label><br>
+                            <input type="text" name="target_audience" value="" id="target_audience" class="title">
+                        </p>
+                        <p>
+                            <label for="goals">Goals</label><br>
+                            <textarea name="goals" rows="3" cols="40"></textarea>
+                        </p>
+                        <p>
+                            <label for="success_metrics">Success Metrics</label><br>
+                            <textarea name="success_metrics" rows="3" cols="40"></textarea>
+                        </p>
+                </fieldset>
+                <fieldset id="objectives">
+                    <legend>Supports Mozilla Objectives</legend>
+                    <p>
+                        <label for="obj_firefox">Firefox</label>
+                        <select name="obj_firefox" id="obj_firefox">
+                            <option value="">--select--</option>
+                            <option value="1">Low</option>
+                            <option value="2">Medium</option>
+                            <option value="3">High</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="obj_mobile">Mobile</label>
+                        <select name="obj_mobile" id="obj_mobile">
+                            <option value="">--select--</option>
+                            <option value="1">Low</option>
+                            <option value="2">Medium</option>
+                            <option value="3">High</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="obj_apps">Apps</label>
+                        <select name="obj_apps" id="obj_apps">
+                            <option value="">--select--</option>
+                            <option value="1">Low</option>
+                            <option value="2">Medium</option>
+                            <option value="3">High</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="obj_identity">Identity</label>
+                        <select name="obj_identity" id="obj_identity">
+                            <option value="">--select--</option>
+                            <option value="1">Low</option>
+                            <option value="2">Medium</option>
+                            <option value="3">High</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="obj_community">Community</label>
+                        <select name="obj_community" id="obj_community">
+                            <option value="">--select--</option>
+                            <option value="1">Low</option>
+                            <option value="2">Medium</option>
+                            <option value="3">High</option>
+                        </select>
+                    </p>
+                </fieldset>
+                <fieldset id="dependencies">
+                    <legend>Dependencies</legend>
+                    <p>
+                    <input type="checkbox" id="dep_legal" name="dep_legal" value="dep_legal">
+                    <label for="dep_legal">legal review</label><br>
+                    <input type="checkbox" id="dep_web analytics" name="dep_web analytics" value="dep_web analytics">
+                    <label for="dep_web_analytics">web analytics</label><br>
+                    <input type="checkbox" id="dep_l10n" name="dep_l10n" value="dep_l10n">
+                    <label for="dep_l10n">l10n</label><br>
+                    <input type="checkbox" id="dep_security" name="dep_security" value="dep_security">
+                    <label for="dep_security">security review</label><br>
+                    <input type="checkbox" id="dep_qa" name="dep_qa" value="dep_qa">
+                    <label for="dep_qa">qa review</label><br>
+                    <input type="checkbox" id="dep_it" name="dep_it" value="dep_it">
+                    <label for="dep_it">it</label><br>
+                    <input type="checkbox" id="dep_privacy" name="dep_privacy" value="dep_privacy">
+                    <label for="dep_privacy">privacy</label><br>
+                    </p>
+                </fieldset>
+
+        <p><input type="submit" value="Submit &rarr;"></p>
+        </form>
+        </div>
+    </div>
+    
+</body>
+    
+</html>
