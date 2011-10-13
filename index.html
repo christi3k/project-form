@@ -15,61 +15,74 @@
         textarea:focus { background-color:#FFFFCC; }
         fieldset { background-color: #e5e5e5; }
         legend { padding: 8px; background-color: #cce0ff; border: 1px solid #cccccc;}
-        #objectives table { border: 1px dotted Black; width: 50%;}
+        #objectives table { border: 1px dotted Black; width: 50%; margin-top: 5px;}
         #objectives label { text-align: right;}
         #objectives th { border-bottom: 1px dotted Black;}
-        
+        .tip { color: grey; display: block; }
+        .required { color: red; padding-left: 2px;}
     </style>
 </head>
 <body>
     <div class="container">
         <h1 id="heading">Web Project Init Tool &mdash; v2 Mockup</h1>
         <div class="span-24 last">
+            <p class="instructions">Instructional text here.</p> 
+            <p class="instructions"><span class="required">*</span> indicates a required field.</p>
             
             <form action="index_submit" method="get" accept-charset="utf-8">
                 <fieldset id="Project Info">
                     <legend>Project Info</legend>
                         <p>
-                            <label for="project_name">Project Name</label><br>
+                            <label for="project_name">Project Name<span class="required">*</span></label><br>
+                            <span class="tip">What is your project called?</span>
                             <input type="text" name="project_name" value="" id="project_name" class="title">
                         </p>
                         <p>
-                            <label for="project_description">Project Description</label><br>
+                            <label for="project_description">Project Description<span class="required">*</span></label><br>
+                            <span class="tip">Tell us a bit about your project.</span>
                             <textarea name="project_description" rows="3" cols="40"></textarea>
                         </p>
                         <p>
                             <label for="project_link">Project Link</label><br>
+                            <span class="tip">Does your project have a wiki page?</span>
                             <input type="url" name="project_link" value="" id="project_link">
                         </p>
                         <p>
-                            <label for="launch_date">Target Launch Date</label><br>
+                            <label for="launch_date">Target Launch Date<span class="required">*</span></label><br>
+                            <span class="tip">When would you like the project to launch (e.g. 12/1, or middle of q4)</span>
                             <input type="text" name="launch_date" value="" id="launch_date">
                         </p>
                 </fieldset>
                 <fieldset id="metrics">
                     <legend>Project Metrics</legend>
                         <p>
-                            <label for="target_audience">Target Audience</label><br>
-                            <input type="text" name="target_audience" value="" id="target_audience" class="title">
+                            <label for="target_audience">Target Audience<span class="required">*</span></label><br>
+                            <span class="tip">To whom is the project directed? (e.g. existing, experience firefox users, mobile users, etc.)</span>
+                            <textarea name="target_audience" rows="3" cols="40"></textarea>
                         </p>
                         <p>
-                            <label for="goals">Goals</label><br>
+                            <label for="goals">Goals<span class="required">*</span></label><br>
+                            <span class="tip">What are your goals for this project? E.g. increase awareness of Mozilla's mission, increase Firefox ADUs.</span>
                             <textarea name="goals" rows="3" cols="40"></textarea>
                         </p>
                         <p>
-                            <label for="success_metrics">Success Metrics</label><br>
+                            <label for="success_metrics">Success Metrics<span class="required">*</span></label><br>
+                            <span class="tip">How you will you determine if the project has met your goals?</span>
                             <textarea name="success_metrics" rows="3" cols="40"></textarea>
                         </p>
                 </fieldset>
                 <fieldset id="objectives">
                     <legend>Supports Mozilla Objectives</legend>
+                    <span class="tip">To what extent does this project support Mozilla's core objectives?</span>
                     <table border="0">
                         <tr>
                             <th>Objective</th>
-                            <th>Extent to which this project supports the objective</th>
+                            <th>My project supports this obejective...</th>
                         </tr>
                         <tr>
-                            <td><label for="obj_firefox">Firefox</label></td>
+                            <td>
+                                <label for="obj_firefox">Firefox<span class="required">*</span></label>
+                            </td>
                             <td>
                                 <select name="obj_firefox" id="obj_firefox">
                                     <option value="">--select--</option>
@@ -82,7 +95,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <label for="obj_mobile">Mobile</label>
+                                <label for="obj_mobile">Mobile<span class="required">*</span></label>
                             </td>
                             <td>
                                 <select name="obj_mobile" id="obj_mobile">
@@ -96,7 +109,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <label for="obj_apps">Apps</label>
+                                <label for="obj_apps">Apps<span class="required">*</span></label>
                             </td>
                             <td>
                                 <select name="obj_apps" id="obj_apps">
@@ -110,7 +123,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <label for="obj_identity">Identity</label>
+                                <label for="obj_identity">Identity<span class="required">*</span></label>
                             </td>
                             <td>
                                 <select name="obj_identity" id="obj_identity">
@@ -124,7 +137,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <label for="obj_community">Community</label>
+                                <label for="obj_community">Community<span class="required">*</span></label>
                             </td>
                             <td>
                                 <select name="obj_community" id="obj_community">
@@ -140,6 +153,7 @@
                 </fieldset>
                 <fieldset id="dependencies">
                     <legend>Dependencies</legend>
+                    <span class="tip">What other teams will need to be involved in your project?</span>
                     <p>
                     <input type="checkbox" id="dep_legal" name="dep_legal" value="dep_legal">
                     <label for="dep_legal">legal review</label><br>
@@ -156,6 +170,14 @@
                     <input type="checkbox" id="dep_privacy" name="dep_privacy" value="dep_privacy">
                     <label for="dep_privacy">privacy</label><br>
                     </p>
+                </fieldset>
+                <fieldset id="comments">
+                    <legend>Other</legend>
+                        <p>
+                            <label for="comments">Comments:</label><br>
+                            <span class="tip">Anything else we should know?</span>
+                            <textarea name="comments" rows="3" cols="40"></textarea>
+                        </p>
                 </fieldset>
 
         <p><input type="submit" value="Submit &rarr;"></p>
