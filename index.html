@@ -4,11 +4,15 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
     <title>Web Project Init Tool - v2 Mockup</title>
+    <!-- Google Font -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <!-- Blueprint CSS-->
     <link rel="stylesheet" href="blueprint/screen.css" type="text/css" media="screen" charset="utf-8">
     <link rel="stylesheet" href="blueprint/screen.css" type="text/css" media="screen" charset="utf-8">
     <!--[if lt IE 8]><link rel="stylesheet" href="../blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
     <style type="text/css" media="screen">
+        body { font-family: 'Open Sans', sans-serif; }
+        p { font-size: 14px; }
         textarea { height: 100px; }
         input[type=text]:focus, input[type=password]:focus, input[type=url]:focus, input[type=email]:focus,
         input.text:focus, input.title:focus,
@@ -20,13 +24,14 @@
         #objectives th { border-bottom: 1px dotted Black;}
         .tip { color: grey; display: block; }
         .required { color: red; padding-left: 2px;}
+        .container { margin-top: 20px; }
     </style>
 </head>
 <body>
     <div class="container">
         <h1 id="heading">Web Project Init Tool &mdash; v2 Mockup</h1>
         <div class="span-24 last">
-            <p class="instructions">Instructional text here.</p> 
+            <p class="instructions">Use this form to let us know about your project. Please be as complete as possible. Contact <> if you have any questions.</p> 
             <p class="instructions"><span class="required">*</span> indicates a required field.</p>
             
             <form action="index_submit" method="get" accept-charset="utf-8">
@@ -87,9 +92,8 @@
                                 <select name="obj_firefox" id="obj_firefox">
                                     <option value="">--select--</option>
                                     <option value="0">Not at All</option>
-                                    <option value="1">A Little</option>
-                                    <option value="2">Some</option>
-                                    <option value="3">Completely</option>
+                                    <option value="1">Some</option>
+                                    <option value="2">Completely</option>
                                 </select>
                             </td>
                         </tr>
@@ -101,9 +105,8 @@
                                 <select name="obj_mobile" id="obj_mobile">
                                     <option value="">--select--</option>
                                     <option value="0">Not at All</option>
-                                    <option value="1">A Little</option>
-                                    <option value="2">Some</option>
-                                    <option value="3">Completely</option>
+                                    <option value="1">Some</option>
+                                    <option value="2">Completely</option>
                                 </select>
                             </td>
                         </tr>
@@ -115,9 +118,8 @@
                                 <select name="obj_apps" id="obj_apps">
                                     <option value="">--select--</option>
                                     <option value="0">Not at All</option>
-                                    <option value="1">A Little</option>
-                                    <option value="2">Some</option>
-                                    <option value="3">Completely</option>
+                                    <option value="1">Some</option>
+                                    <option value="2">Completely</option>
                                 </select>
                             </td>
                         </tr>
@@ -129,9 +131,8 @@
                                 <select name="obj_identity" id="obj_identity">
                                     <option value="">--select--</option>
                                     <option value="0">Not at All</option>
-                                    <option value="1">A Little</option>
-                                    <option value="2">Some</option>
-                                    <option value="3">Completely</option>
+                                    <option value="1">Some</option>
+                                    <option value="2">Completely</option>
                                 </select>
                             </td>
                         </tr>
@@ -143,9 +144,8 @@
                                 <select name="obj_community" id="obj_community">
                                     <option value="">--select--</option>
                                     <option value="0">Not at All</option>
-                                    <option value="1">A Little</option>
-                                    <option value="2">Some</option>
-                                    <option value="3">Completely</option>
+                                    <option value="1">Some</option>
+                                    <option value="2">Completely</option>
                                 </select>
                             </td>
                         </tr>
@@ -157,7 +157,7 @@
                     <p>
                     <input type="checkbox" id="dep_legal" name="dep_legal" value="dep_legal">
                     <label for="dep_legal">legal review</label><br>
-                    <input type="checkbox" id="dep_web analytics" name="dep_web analytics" value="dep_web analytics">
+                    <input type="checkbox" id="dep_web_analytics" name="dep_web analytics" value="dep_web analytics">
                     <label for="dep_web_analytics">web analytics</label><br>
                     <input type="checkbox" id="dep_l10n" name="dep_l10n" value="dep_l10n">
                     <label for="dep_l10n">l10n</label><br>
