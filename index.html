@@ -15,7 +15,9 @@
         textarea:focus { background-color:#FFFFCC; }
         fieldset { background-color: #e5e5e5; }
         legend { padding: 8px; background-color: #cce0ff; border: 1px solid #cccccc;}
-
+        #objectives table { border: 1px dotted Black; width: 50%;}
+        #objectives label { text-align: right;}
+        #objectives th { border-bottom: 1px dotted Black;}
         
     </style>
 </head>
@@ -61,51 +63,75 @@
                 </fieldset>
                 <fieldset id="objectives">
                     <legend>Supports Mozilla Objectives</legend>
-                    <p>
-                        <label for="obj_firefox">Firefox</label>
-                        <select name="obj_firefox" id="obj_firefox">
-                            <option value="">--select--</option>
-                            <option value="1">Low</option>
-                            <option value="2">Medium</option>
-                            <option value="3">High</option>
-                        </select>
-                    </p>
-                    <p>
-                        <label for="obj_mobile">Mobile</label>
-                        <select name="obj_mobile" id="obj_mobile">
-                            <option value="">--select--</option>
-                            <option value="1">Low</option>
-                            <option value="2">Medium</option>
-                            <option value="3">High</option>
-                        </select>
-                    </p>
-                    <p>
-                        <label for="obj_apps">Apps</label>
-                        <select name="obj_apps" id="obj_apps">
-                            <option value="">--select--</option>
-                            <option value="1">Low</option>
-                            <option value="2">Medium</option>
-                            <option value="3">High</option>
-                        </select>
-                    </p>
-                    <p>
-                        <label for="obj_identity">Identity</label>
-                        <select name="obj_identity" id="obj_identity">
-                            <option value="">--select--</option>
-                            <option value="1">Low</option>
-                            <option value="2">Medium</option>
-                            <option value="3">High</option>
-                        </select>
-                    </p>
-                    <p>
-                        <label for="obj_community">Community</label>
-                        <select name="obj_community" id="obj_community">
-                            <option value="">--select--</option>
-                            <option value="1">Low</option>
-                            <option value="2">Medium</option>
-                            <option value="3">High</option>
-                        </select>
-                    </p>
+                    <table border="0">
+                        <tr>
+                            <th>Objective</th>
+                            <th>Extent to which this project supports the objective</th>
+                        </tr>
+                        <tr>
+                            <td><label for="obj_firefox">Firefox</label></td>
+                            <td>
+                                <select name="obj_firefox" id="obj_firefox">
+                                    <option value="">--select--</option>
+                                    <option value="1">Low</option>
+                                    <option value="2">Medium</option>
+                                    <option value="3">High</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="obj_mobile">Mobile</label>
+                            </td>
+                            <td>
+                                <select name="obj_mobile" id="obj_mobile">
+                                    <option value="">--select--</option>
+                                    <option value="1">Low</option>
+                                    <option value="2">Medium</option>
+                                    <option value="3">High</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="obj_apps">Apps</label>
+                            </td>
+                            <td>
+                                <select name="obj_apps" id="obj_apps">
+                                    <option value="">--select--</option>
+                                    <option value="1">Low</option>
+                                    <option value="2">Medium</option>
+                                    <option value="3">High</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="obj_identity">Identity</label>
+                            </td>
+                            <td>
+                                <select name="obj_identity" id="obj_identity">
+                                    <option value="">--select--</option>
+                                    <option value="1">Low</option>
+                                    <option value="2">Medium</option>
+                                    <option value="3">High</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="obj_community">Community</label>
+                            </td>
+                            <td>
+                                <select name="obj_community" id="obj_community">
+                                    <option value="">--select--</option>
+                                    <option value="1">Low</option>
+                                    <option value="2">Medium</option>
+                                    <option value="3">High</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
                 </fieldset>
                 <fieldset id="dependencies">
                     <legend>Dependencies</legend>
