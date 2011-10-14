@@ -33,10 +33,14 @@
         <div class="span-24 last">
             <p class="instructions">Use this form to let us know about your project. Please be as complete as possible. Contact <> if you have any questions.</p> 
             <p class="instructions"><span class="required">*</span> indicates a required field.</p>
+            <p>Jump to: <a href="#info">Info</a>, <a href="#market">Market Analysis</a>, <a href="#goals">Goals &amp; Metrics</a>, <a href="#objectives">Supports Mozilla Objectives</a>, <a href="#dependencies">Dependencies</a>, <a href="#other">Other</a>.
+
+ 
+
             
             <form action="index_submit" method="get" accept-charset="utf-8">
                 <fieldset id="Project Info">
-                    <legend>Project Info</legend>
+                    <legend><a name="info"></a>Project Info</legend>
                         <p>
                             <label for="project_name">Project Name<span class="required">*</span></label><br>
                             <span class="tip">What is your project called?</span>
@@ -58,13 +62,26 @@
                             <input type="text" name="launch_date" value="" id="launch_date">
                         </p>
                 </fieldset>
-                <fieldset id="metrics">
-                    <legend>Project Metrics</legend>
+                <fieldset id="market_analysis">
+                    <legend><a name="market"></a>Market Analysis</legend>
                         <p>
                             <label for="target_audience">Target Audience<span class="required">*</span></label><br>
                             <span class="tip">To whom is the project directed? (e.g. existing, experience firefox users, mobile users, etc.)</span>
                             <textarea name="target_audience" rows="3" cols="40"></textarea>
                         </p>
+                        <p>
+                            <label for="size_demographics">Size and Demographics<span class="required">*</span></label><br>
+                            <span class="tip">What is the size and the democraphics of this target market?</span>
+                            <textarea name="size_demographics" rows="3" cols="40"></textarea>
+                        </p>
+                        <p>
+                            <label for="traffic_assumptions">Traffic Assumpations &amp; Projections<span class="required">*</span></label><br>
+                            <span class="tip">How much traffic are you expecting this campaign to generate?</span>
+                            <textarea name="traffic_assumptions" rows="3" cols="40"></textarea>
+                        </p>
+                </fieldset>
+                <fieldset id="goals">
+                    <legend><a name="goals"></a>Goals &amp; Metrics</legend>
                         <p>
                             <label for="goals">Goals<span class="required">*</span></label><br>
                             <span class="tip">What are your goals for this project? E.g. increase awareness of Mozilla's mission, increase Firefox ADUs.</span>
@@ -77,7 +94,7 @@
                         </p>
                 </fieldset>
                 <fieldset id="objectives">
-                    <legend>Supports Mozilla Objectives</legend>
+                    <legend><a name="objectives"></a>Supports Mozilla Objectives</legend>
                     <span class="tip">To what extent does this project support Mozilla's core objectives?</span>
                     <table border="0">
                         <tr>
@@ -126,7 +143,7 @@
                     </table>
                 </fieldset>
                 <fieldset id="dependencies">
-                    <legend>Dependencies</legend>
+                    <legend><a name="dependencies"></a>Dependencies</legend>
                     <span class="tip">What other teams will need to be involved in your project?</span>
                     <p>
                     <input type="checkbox" id="dep_legal" name="dep_legal" value="dep_legal">
@@ -143,13 +160,16 @@
                     <label for="dep_it">IT</label><br>
                     <input type="checkbox" id="dep_privacy" name="dep_privacy" value="dep_privacy">
                     <label for="dep_privacy">Privacy</label><br>
+                    <input type="checkbox" id="dep_other" name="dep_other" value="dep_other">
+                    <label for="dep_other">Other:</label>
+                    <input type="text" name="dep_other_value" value="" id="dep_other_value">
                     </p>
                 </fieldset>
                 <fieldset id="comments">
-                    <legend>Other</legend>
+                    <legend><a name="other"></a>Other</legend>
                         <p>
                             <label for="comments">Comments</label><br>
-                            <span class="tip">Anything else we should know?</span>
+                            <span class="tip">Anything else we should know? Include items suchs as integration with third-party services, working with outside contractors, etc.</span>
                             <textarea name="comments" rows="3" cols="40"></textarea>
                         </p>
                 </fieldset>
